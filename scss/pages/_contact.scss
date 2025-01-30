@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/content-mixins" as *;
+@use "../abstracts/variables" as *;
+
+.main.contact-form {
+  > .contact {
+    @include common-form;
+    background-color: $col-lityellow;
+    > .wrap {
+      > .form {
+        > .btnc {
+          > .btn {
+            &.btn-modify {
+              background: $col-gray;
+              border: 3px solid $col-gray;
+            }
+          }
+        }
+      }
+      > .txt {
+        text-align: center;
+        font-weight: $fw-med;
+        margin-top: 30px;
+      }
+    }
+  }
+  //CONTACT
+}
+//MAIN CONTACT_FORM

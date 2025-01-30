@@ -1,0 +1,365 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/content-mixins" as *;
+@use "../abstracts/variables" as *;
+
+html {
+	font-family: "Source-Han-Sans JP","Noto Sans JP", sans-serif;
+	color: $col-black;
+	line-height: 1.7;
+	@include max {
+		line-height: 1.9;
+	}
+}
+
+body {
+	scroll-behavior: smooth;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+label,
+select {
+	cursor: pointer;
+}
+
+.none {
+	&-max {
+		&-l {
+			@include max(l) {
+				display: none;
+			}
+		}
+		&-t {
+			@include max {
+				display: none;
+			}
+		}
+		&-ml {
+			@include max(ml) {
+				display: none;
+			}
+		}
+		&-1200 {
+			@include max(1200px) {
+				display: none;
+			}
+		}
+	}
+	&-min {
+		&-l {
+			@include min(l) {
+				display: none;
+			}
+		}
+		&-t {
+			@include min {
+				display: none;
+			}
+		}
+		&-ml {
+			@include min(ml) {
+				display: none;
+			}
+		}
+		&-1200 {
+			@include min(1200px) {
+				display: none;
+			}
+		}
+	}
+}
+// NONE
+
+header {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	// box-shadow: #c4c4c6 0 0 7px 0;
+	width: 100%;
+	height: 120px;
+	background-color: white;
+	align-content: center;
+	@include max {
+		// display: none;
+		height: 60px
+	}
+	>.inner {
+		@include header-wrap;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// gap: clamp(40px, 6vw, 188px);
+		// gap: 188px;
+		height: inherit;
+		@include max {
+			gap:0;
+		}
+		>.logo {
+			>.h1 {
+				>a {
+					>.img {
+						max-width: 440px;
+						@include max {
+							width: 260px;
+						}
+					}
+				}
+			}
+		}
+		>.nav {
+			// flex-grow: 1;
+			>ul {
+				display : flex; 
+				gap: 70px;
+				@media (max-width:1700px) {
+					gap: 45px;
+				}
+				@media (max-width:1500px) {
+					gap: 25px;
+				}
+				@media (max-width:1400px) {
+					gap: 15px;
+				}
+				>.item {
+					color: $col-blue;
+					font-size: clamp(16px, 1.33vw, 20px);
+					font-weight: $fw-bol;
+					align-content: center;
+					// flex-grow: 1;
+					white-space: nowrap;
+					align-items: center;
+					cursor: pointer;
+					&.entry_btn {
+						color: $col-wh;
+						background-color: $col-blue;
+						border-radius: 35px;
+						align-content: center;
+						max-width: 392px;
+						height: 70px;
+						flex-grow: unset;
+						padding: 0px 30px;
+						cursor: pointer;
+						>.entry_txt {
+							>.apply {
+								font-size: clamp(12px, 1vw, 14px);
+								transform: translateY(-3px);
+    						display: inline-block;
+							}
+							>.entry {
+								font-size: clamp(18px, 1.5vw, 22px);
+							}
+						}
+					}
+				}
+			}
+		}
+		>.ham_btn {
+			display: none;
+			@media (max-width:1200px) {
+				background-color: $col-navy;
+				align-content: center;
+				display: block;
+				cursor: pointer;
+				>.btn_div {
+					padding-block: 0;
+					align-content: center;
+					width: 120px;
+					height: 120px;
+					@include max {
+						width: 60px;
+						height: 60px;
+					}
+					.ham_bar {
+						display: block;
+						width: 36px;
+						height : 2px;
+						background-color: $col-wh;
+						position: relative;
+						border-radius: 1px;
+						margin: 0 auto;
+						transition-duration: 0.2s;
+						@include max {
+							width: 28px;
+						}
+						&::before, &::after {
+							content: "";
+							position: absolute;
+							height: 2px;
+							width: 36px;
+							background-color: $col-wh;
+							left: 0;
+							border-radius: 1px;
+							transition-duration: 0.2s;
+							@include max {
+								width: 28px;
+							}
+						}
+						&::before {
+							top: -9px;
+						}
+						&::after {
+							bottom: -9px;
+						}
+					}
+				}
+				&.active {
+					>.btn_div {
+						.ham_bar {
+							background-color: rgb(255, 255, 255, 0);
+							&::before {
+								top: 0;
+								transform: rotate(45deg);
+								transform-origin: 50% 50%;
+								transition-duration: 0.5s;
+							}
+							&::after {
+								bottom: 0;
+								transform: rotate(-45deg);
+								transform-origin: 50% 50%;
+								transition-duration: 0.5s;
+							}
+						}
+					}
+				}
+			}
+		}
+		>.sp_nav {
+			position: fixed;
+			left: 120%;
+			background-color: #4d83be;
+			width: 100%;
+			height: calc(100% - 60px);
+			top: 120px;
+			padding: 70px 0px;
+			transition-duration: 0.2s;
+			overflow-y: scroll;
+			@include max {
+				top: 60px;
+			}
+			&.active {
+				left: 0%;
+				transition-duration: 0.2s;
+			}
+			>.inner {
+				margin-inline: auto;
+				width: 60%;
+				min-width: 285px;
+				>ul {
+					display: block;
+					margin-bottom: 90px;
+					>.item {
+						color: $col-wh;
+						font-size: 18px;
+						font-weight: $fw-bol;
+						margin-bottom: 40px;
+						position: relative;
+						cursor: pointer;
+						&::after {
+							content: "";
+							position: absolute;
+							width: 9.9px;
+							height: 9.9px;
+							border-top: 2px solid $col-wh;
+							border-right: 2px solid $col-wh;
+							transform: rotate(45deg);
+							transform-origin: top left;
+							top: calc(50% - 7px);
+    					right: 0px;
+						}
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+				>.item.entry_btn {
+					cursor: pointer;
+					>a {
+						color: $col-blue;
+						font-weight: $fw-bol;
+						text-align: center;
+						display: block;
+						background-color: $col-wh;
+						padding: 18px 30px;
+						border-radius: 10px;
+						>.apply {
+							display: inline-block;
+							margin-bottom: 5px;
+							font-size: 14px;
+						}
+						>.entry {
+							display: inline-block;
+							font-size: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+//HEADER
+footer {
+	padding-bottom: 40px;
+	> .wrap {
+		@include min-wrap;
+		display: grid;
+		padding-inline: 90px;
+		@include max {
+			padding-inline: 0;
+			row-gap: 40px;
+		}
+		>.left {
+			grid-column: 1/2;
+			display: grid;
+			grid-template-rows: repeat(3,1fr);
+			row-gap: 35px;
+			@include max {
+				text-align: center;
+			}
+			>.logo {
+				width: 371px;
+				@include max {
+					width: max(250px,80%);
+					margin-inline: auto;
+				}
+			}
+			>.link_official {
+				@include link;
+      }
+			>.rights {
+				> .txt {
+					color: white;
+					font-size: 14px;
+					text-align: center;
+					@include max {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		>.right {
+			grid-column: 2/3;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 60px;
+			@include max {
+				grid-column: 1/2;
+				justify-content: center;
+			}
+			>.link {
+				width: 60px;
+				// height: 60px;
+				@include max {
+					width: 40px;
+				}
+			}
+		}
+
+	}
+}
+//FOOTER

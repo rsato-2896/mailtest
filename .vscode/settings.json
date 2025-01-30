@@ -1,0 +1,40 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/css",
+        "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+	],
+	"cSpell.words": [
+		"aboutus",
+		"caddress",
+		"carlease",
+		"cemail",
+		"cmsg",
+		"cstore",
+		"csubmit",
+		"ctel",
+		"ctitle",
+		"cttc",
+		"detailc",
+		"ferror",
+		"ffrom",
+		"lityellow",
+		"mainvisual",
+		"newcar",
+		"raddress",
+		"rcoming",
+		"rmsg",
+		"rname",
+		"rstore",
+		"rsubmit",
+		"rtel"
+	]
+}

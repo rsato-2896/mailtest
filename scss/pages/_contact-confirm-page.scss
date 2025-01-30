@@ -1,0 +1,177 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/content-mixins" as *;
+@use "../abstracts/variables" as *;
+
+.main.contact-confirm {
+  >.entry_form {
+    padding-block: 80px 100px;
+    @include max {
+      padding-block: 50px 80px
+    }
+    >.wrap {
+      @include min-wrap;
+      >.ttl {
+        >.h2 {
+          @include common-ttl;
+        }
+      }
+      >.sub_ttl {
+        font-size: 20px;
+        margin-bottom: 50px;
+        font-weight: $fw-bol;
+        @include max {
+          font-size: 16px;
+          margin-bottom: 30px;
+        }
+      }
+      >.form {
+        >.item {
+          display: grid;
+          grid-template-columns: 25% 75%;
+          margin-bottom: 40px;
+          justify-content: space-between;
+          @include max {
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+            margin-bottom: 25px;
+          }
+          >.label {
+            font-size: 18px;
+            @include max {
+              font-size: 14px;
+            }
+            &.require::after {
+              content: "*";
+              color: #E2070B;
+              margin-left: 3px;
+            }
+          }
+          >.input {
+            position: relative;
+            font-size: 18px;
+            @include max {
+              font-size: 14px;
+            }
+            &.select_div:has(.age)::before {
+              content: "歳";
+              font-size: 18px;
+              position: absolute;
+              right: -40px;
+              top: calc(50% - 15px);
+              @include max {
+                font-size: 14px;
+              top: calc(50% - 11px);
+              }
+            }
+            &.select_div::after {
+              content: "";
+              position: absolute;
+              top: calc(50% - 4px);
+              right: 10px;
+              border-top: 8px solid #C6C6C6;
+              border-right: 6px solid transparent;
+              border-left: 6px solid transparent;
+              border-bottom: 8px solid transparent;
+            }
+            &:has(.age) {
+              width: 104px;
+            }
+              .text,
+              .select,
+              .textarea {
+                border: 1px solid #707070;
+                border-radius: 4px;
+                background-color: $col-wh;
+                width: 100%;
+                padding: 15px 30px;
+                @include max {
+                  padding: 15px 20px;
+                }
+              }
+              .text::placeholder,
+              .select::placeholder,
+              .textarea::placeholder {
+                color: #AFAFAF;
+              }
+              .text {
+                height: 56px;
+                align-content: center;
+                @include max {
+                  height: 52px;
+                }
+              }
+              .select {
+                height: 56px;
+                align-content: center;
+                padding: 12px 0px 15px 30px;
+                @include max {
+                  height: 52px;
+                  padding: 12px 0px 15px 20px;
+                }
+                &.age {
+                  width: 104px;
+                  margin-right: 15px;
+                  margin-top: -2px;
+                  padding: 12px 0px 15px 30px;
+                  @include max {
+                    height: 52px;
+                    padding: 12px 0px 15px 30px;
+                  }
+                }
+              }
+              .textarea {
+                min-height: 315px;
+                height: fit-content;
+                padding: 25px 30px;
+                @include max {
+                  padding: 20px;
+                }
+              }
+          }
+          >.error {
+            color: $col-red;
+            font-size: 18px;
+            grid-column: 2/3;
+            margin-top: 20px;
+            @include max {
+              font-size: 14px;
+              grid-column: 1/2;
+              margin-top: 0px;
+            }
+          }
+        }
+        >.btn_div {
+          text-align: center;
+          margin-inline: auto;
+          >.btn {
+            color: $col-wh;
+            font-size: 20px;
+            font-weight: $fw-bol;
+            background-color: $col-blue;
+            border-radius: 35px;
+            align-content: center;
+            width: 336px;
+            height: 74px;
+            padding: 0px 30px;
+            cursor: pointer;
+            @include max {
+              font-size: 16px;
+              width:  max(225px, 45%);
+              height: 56px;
+            }
+          }
+        } 
+        >.note {
+					font-size: 16px;
+					margin-bottom: 60px;
+					text-align: center;
+					@include max {
+						font-size: 14px;
+						margin-bottom: 50px;
+					}
+				}
+      }
+    }
+  }
+}
+//MAIN CONTACT
