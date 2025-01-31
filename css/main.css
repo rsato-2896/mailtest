@@ -2413,13 +2413,13 @@ footer > .wrap > .right > .link {
     margin-bottom: 10px;
   }
 }
-.main.contact > .entry_form > .wrap > .sub_ttl {
+.main.contact > .entry_form > .wrap > .subttl {
   font-size: 20px;
   margin-bottom: 50px;
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
-  .main.contact > .entry_form > .wrap > .sub_ttl {
+  .main.contact > .entry_form > .wrap > .subttl {
     font-size: 16px;
     margin-bottom: 30px;
   }
@@ -2615,113 +2615,226 @@ footer > .wrap > .right > .link {
   }
 }
 
-.main.reserve-form > .reserve {
-  padding: 50px 0;
-  background-color: #C5EFD0;
+.main.contact-confirm > .entry_form {
+  padding-block: 80px 100px;
 }
 @media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve {
-    padding: 30px 0 40px;
+  .main.contact-confirm > .entry_form {
+    padding-block: 50px 80px;
   }
 }
-.main.reserve-form > .reserve > .wrap > .ttl {
-  font-size: 30px;
+.main.contact-confirm > .entry_form > .wrap {
+  max-width: 1048px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap {
+    width: calc(100% - 30px);
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .ttl > .h2 {
+  color: #024EA2;
+  font-size: 42px;
   font-weight: 700;
-  text-align: center;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve > .wrap > .ttl {
-    font-size: 20px;
+  .main.contact-confirm > .entry_form > .wrap > .ttl > .h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
   }
 }
-.main.reserve-form > .reserve > .wrap > .form > .row {
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.main.contact-confirm > .entry_form > .wrap > .ttl > .h2::before {
+  content: "";
+  display: inline-block;
+  border-top: 1px solid #024EA2;
+  width: 100px;
+  margin-right: 30px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .ttl > .h2::before {
+    width: 60px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .subttl {
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .subttl {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin-bottom: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve > .wrap > .form > .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 10px;
+  .main.contact-confirm > .entry_form > .wrap > .form > .item {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    margin-bottom: 25px;
   }
 }
-@media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve > .wrap > .form > .row:not(:first-of-type) {
-    margin-top: 20px;
-  }
-}
-.main.reserve-form > .reserve > .wrap > .form > .row > .label {
-  font-weight: 700;
-  width: 30%;
-}
-@media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve > .wrap > .form > .row > .label {
-    width: 100%;
-  }
-}
-.main.reserve-form > .reserve > .wrap > .form > .row > .input {
-  width: 70%;
-}
-@media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve > .wrap > .form > .row > .input {
-    width: 100%;
-  }
-}
-.main.reserve-form > .reserve > .wrap .btnc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-@media screen and (max-width: 768px) {
-  .main.reserve-form > .reserve > .wrap .btnc {
-    margin-top: 40px;
-  }
-}
-.main.reserve-form > .reserve > .wrap .btnc > .btn {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  display: block;
-  max-width: 190px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#800000));
-  background: linear-gradient(#f00 0%, #800000 100%);
-  border: 3px solid #aa0004;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .label {
   font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
+  cursor: none;
 }
-.main.reserve-form > .reserve > .wrap .btnc > .btn:hover {
-  opacity: 0.7;
-}
-@media (hover: hover) {
-  .main.reserve-form > .reserve > .wrap .btnc > .btn:hover {
-    -webkit-transition: opacity 0.2s;
-    transition: opacity 0.2s;
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .label {
+    font-size: 14px;
   }
 }
-.main.reserve-form > .reserve > .wrap > .form > .btnc > .btn.btn-modify {
-  background: #919191;
-  border: 3px solid #919191;
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .label.require::after {
+  content: "*";
+  color: #E2070B;
+  margin-left: 3px;
 }
-.main.reserve-form > .reserve > .wrap > .txt {
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value {
+  position: relative;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value {
+    font-size: 14px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text,
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select,
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea {
+  border: 1px solid #707070;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  padding: 15px 30px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text,
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select,
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea {
+    padding: 15px 20px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text::-webkit-input-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select::-webkit-input-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea::-webkit-input-placeholder {
+  color: #AFAFAF;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text::-moz-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select::-moz-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea::-moz-placeholder {
+  color: #AFAFAF;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text:-ms-input-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select:-ms-input-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea:-ms-input-placeholder {
+  color: #AFAFAF;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text::-ms-input-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select::-ms-input-placeholder, .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea::-ms-input-placeholder {
+  color: #AFAFAF;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text::placeholder,
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select::placeholder,
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea::placeholder {
+  color: #AFAFAF;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text {
+  height: 56px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .text {
+    height: 52px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select {
+  height: 56px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 12px 0px 15px 30px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select {
+    height: 52px;
+    padding: 12px 0px 15px 20px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select.age {
+  width: 104px;
+  margin-right: 15px;
+  margin-top: -2px;
+  padding: 12px 0px 15px 30px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .select.age {
+    height: 52px;
+    padding: 12px 0px 15px 30px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea {
+  min-height: 315px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 25px 30px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .input_value .textarea {
+    padding: 20px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > .select_value.age::after {
+  content: "歳";
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .item > .select_value.age::after {
+    font-size: 14px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .item > :has(.age) {
+  width: 104px;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .btn_div {
   text-align: center;
-  font-weight: 500;
-  margin-top: 30px;
+  margin-inline: auto;
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .btn_div > .btn,
+.main.contact-confirm > .entry_form > .wrap > .form > .btn_div > a {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #024EA2;
+  border-radius: 35px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: inline-block;
+  width: 336px;
+  height: 74px;
+  padding: 0px 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .btn_div > .btn,
+  .main.contact-confirm > .entry_form > .wrap > .form > .btn_div > a {
+    font-size: 16px;
+    width: max(225px, 45%);
+    height: 56px;
+  }
+}
+.main.contact-confirm > .entry_form > .wrap > .form > .note {
+  font-size: 16px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .main.contact-confirm > .entry_form > .wrap > .form > .note {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */

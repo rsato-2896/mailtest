@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: テストお問い合わせフォーム（確認）
+*/
 session_start();
 require TEMPLATEPATH . '/inc/my_variables.php';
 require TEMPLATEPATH . '/inc/mail-contact.php';
@@ -14,55 +17,73 @@ require TEMPLATEPATH . '/inc/mail-contact.php';
       <div class="ttl">
         <h2 class="h2">エントリーフォーム</h2>
       </div>
-      <div class="sub_ttl">
+      <div class="subttl">
         確認画面
       </div>
 
       <!-- ////////// FORM start ////////// -->
       <form class="form" id="entry_form" action="" method="post">
         <div class="item">
-          <label class="label require" for="yourname">氏名</label>
-          <?php $fpost['yourname'] ?>
+          <label class="label require">氏名</label>
+          <div class="input_value">
+            <?php echo $fpost['yourname'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label require" for="yourruby">フリガナ</label>
-          <?php $fpost['yourruby'] ?>
+          <label class="label require">フリガナ</label>
+          <div class="input_value">
+            <?php echo $fpost['yourruby'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label require" for="youremail">メールアドレス</label>
-          <?php $fpost['youremail'] ?>
+          <label class="label require">メールアドレス</label>
+          <div class="input_value">
+            <?php echo $fpost['youremail'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label require" for="emailagain">メールアドレス確認</label>
-          <?php $fpost['emailagain'] ?>
+          <label class="label require">メールアドレス確認</label>
+          <div class="input_value">
+            <?php echo $fpost['emailagain'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label require" for="yourtel">電話番号</label>
-          <?php $fpost['yourtel'] ?>
+          <label class="label require">電話番号</label>
+          <div class="input_value">
+            <?php echo $fpost['yourtel'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label require" for="yourage">年齢</label>
-          <?php $fpost['yourage'] ?>
+          <label class="label require">年齢</label>
+          <div class="select_value age">
+            <?php echo $fpost['yourage'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label" for="location">希望勤務先</label>
-          <?php $fpost['location'] ?>
+          <label class="label">希望勤務先</label>
+          <div class="select_value">
+            <?php echo $fpost['location'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label" for="type">雇用形態</label>
-          <?php $fpost['type'] ?>
+          <label class="label">雇用形態</label>
+          <div class="select_value">
+            <?php echo $fpost['type'] ?>
+          </div>
         </div>
 
         <div class="item">
-          <label class="label textarea" for="content">お問い合せ内容</label>
-          <?php $fpost['content'] ?>
+          <label class="label textarea">お問い合せ内容</label>
+          <div class="input_value">
+            <?php echo $fpost['content'] ?>
+          </div>
         </div>
 
         <div class="btn_div">

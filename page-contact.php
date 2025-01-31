@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: テストお問い合わせフォーム（入力）
+*/
 session_start();
 require TEMPLATEPATH . '/inc/my_variables.php';
 require TEMPLATEPATH . '/inc/mail-contact.php';
@@ -14,7 +17,7 @@ require TEMPLATEPATH . '/inc/mail-contact.php';
       <div class="ttl">
         <h2 class="h2">エントリーフォーム</h2>
       </div>
-      <div class="sub_ttl">
+      <div class="subttl">
         入力画面
       </div>
 

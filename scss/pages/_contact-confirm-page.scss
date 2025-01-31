@@ -15,7 +15,7 @@
           @include common-ttl;
         }
       }
-      >.sub_ttl {
+      >.subttl {
         font-size: 20px;
         margin-bottom: 50px;
         font-weight: $fw-bol;
@@ -37,6 +37,7 @@
           }
           >.label {
             font-size: 18px;
+            cursor: none;
             @include max {
               font-size: 14px;
             }
@@ -46,35 +47,11 @@
               margin-left: 3px;
             }
           }
-          >.input {
+          >.input_value {
             position: relative;
             font-size: 18px;
             @include max {
               font-size: 14px;
-            }
-            &.select_div:has(.age)::before {
-              content: "歳";
-              font-size: 18px;
-              position: absolute;
-              right: -40px;
-              top: calc(50% - 15px);
-              @include max {
-                font-size: 14px;
-              top: calc(50% - 11px);
-              }
-            }
-            &.select_div::after {
-              content: "";
-              position: absolute;
-              top: calc(50% - 4px);
-              right: 10px;
-              border-top: 8px solid #C6C6C6;
-              border-right: 6px solid transparent;
-              border-left: 6px solid transparent;
-              border-bottom: 8px solid transparent;
-            }
-            &:has(.age) {
-              width: 104px;
             }
               .text,
               .select,
@@ -128,28 +105,43 @@
                 }
               }
           }
-          >.error {
-            color: $col-red;
+          >.select_value.age::after {
+            content: "歳";
             font-size: 18px;
-            grid-column: 2/3;
-            margin-top: 20px;
+            // position: absolute;
+            // right: -40px;
+            // top: calc(50% - 15px);
             @include max {
               font-size: 14px;
-              grid-column: 1/2;
-              margin-top: 0px;
+              // top: calc(50% - 11px);
             }
+          }
+          // >.select_value::after {
+          //   content: "";
+          //   position: absolute;
+          //   top: calc(50% - 4px);
+          //   right: 10px;
+          //   border-top: 8px solid #C6C6C6;
+          //   border-right: 6px solid transparent;
+          //   border-left: 6px solid transparent;
+          //   border-bottom: 8px solid transparent;
+          // }
+          >:has(.age) {
+            width: 104px;
           }
         }
         >.btn_div {
           text-align: center;
           margin-inline: auto;
-          >.btn {
+          >.btn,
+          >a {
             color: $col-wh;
             font-size: 20px;
             font-weight: $fw-bol;
             background-color: $col-blue;
             border-radius: 35px;
             align-content: center;
+            display: inline-block;
             width: 336px;
             height: 74px;
             padding: 0px 30px;
